@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import 'normalize.css'
+
 import type { AppProps } from 'next/app'
 
 function App({ Component, pageProps }: AppProps) {
