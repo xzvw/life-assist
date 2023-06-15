@@ -1,0 +1,32 @@
+.container {
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  min-width: 0;
+  padding: 12px 16px;
+
+  &.titleColumn {
+    flex: 1;
+  }
+
+  &.descriptionColumn {
+    flex: 1;
+  }
+
+  &.deadlineColumn {
+    flex: 1;
+  }
+
+  &.importanceColumn {
+    flex: 1;
+  }
+
+  &.actionsColumn {
+    flex: 1;
+  }
+}
