@@ -1,21 +1,15 @@
-import useSWR from 'swr'
-import styles from './Tasks.module.scss'
+import classNames from 'classnames'
+import styles from './TaskList.module.scss'
 
 import type { Tasks } from '@/modules/task/types'
-import classNames from 'classnames'
 
-function TasksPage() {
-  const { data: tasks } = useSWR<Tasks>(
-    `api/tasks`,
-    (args) => fetch(args).then((response) => response.json())
-  )
+export type TaskListProps = {
+  tasks: Tasks
+}
 
-  if (!tasks) {
-    return null
-  }
-
+function TaskList({ tasks }: TaskListProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.table}>
       <div className={styles.header}>
         <div className={styles.row}>
           <div className={classNames(styles.column, styles.titleColumn)}>
@@ -64,4 +58,4 @@ function TasksPage() {
   )
 }
 
-export default TasksPage
+export default TaskList

@@ -1,4 +1,4 @@
-import TasksPage from '@/components/pages/Tasks'
+import TasksPage from '@/components/pages/TasksPage'
 
 function PagesTasks() {
   return <TasksPage />
